@@ -1,0 +1,96 @@
+/* Загальний стиль для сторінки */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.settings-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Стилі для кнопок вкладок */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.active-tab {
+    background-color: #e0f7e0;
+    border: 1px solid #13eb13;
+}
+
+/* Стилі для таблиці */
+.settings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.settings-table th, .settings-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.settings-table th {
+    background-color: #f9f9f9;
+}
+
+.settings-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Статуси */
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.draft {
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+.active {
+    background-color: #e0f7e0;
+    color: #13eb13;
+}
+
+/* Кнопка видалення */
+.delete-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
