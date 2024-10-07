@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+ }
+ .settings-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px; 
+ }
+ .header1 {
+    font-size: 18px; /* Розмір шрифту */
+    color: #333; /* Темно-сірий колір тексту */
+    text-align: left; /* Вирівнювання по лівому краю */
+    margin-bottom: 20px; /* Відступ знизу для простору між заголовком і вкладками */ /* Великі літери */
+    letter-spacing: 1px; /* Простір між літерами */
+    font-weight:bold; /* Нормальна товщина шрифту */
+ }
+ .tabs {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 10px;
+    background-color: #fffcfc;
+    border-radius: 5px; 
+ }
+ .tab-button {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+ }
+ .active-tab {
+    border-bottom: 2px solid green;
+    font-weight: normal;
+ }
+ .settings-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fffcfc;
+    border-radius: 10px;
+    overflow: hidden; 
+ }
+ .settings-table thead {
+    background-color: #ffffff;
+    text-align: left;
+ }
+ .settings-table thead th:first-child {
+    border-top-left-radius: 10px; /* Закруглення лівого верхнього кута */
+ }
+ .settings-table th:last-child {
+    border-top-right-radius: 10px; /* Закруглення правого верхнього кута */
+ }
+ .settings-table th, .settings-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-weight: normal;
+ }
+ .settings-table a{
+    color: #648ff5
+ }
+ .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+ }
+ .status.draft {
+    background-color: #f0f0f0;
+    color: #494949;
+    border-radius: 25px;
+ }
+ .status.active {
+    background-color: #e0ffe0;
+    color: #30673d;
+    border-radius: 25px;
+ }
+ .delete-image {
+    cursor: pointer;
+    color: #888;
+ }
+ .delete-image:hover {
+    color: red;
+ }
