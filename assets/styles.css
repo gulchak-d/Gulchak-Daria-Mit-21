@@ -1,0 +1,123 @@
+:root {
+    --Color-text-text: #303030;
+    --Color-bg: #F1F1F1;
+    --Color-icon-icon-success: #29845A;
+    --Color-text-link-link: #0070F3;
+    --Height-table-row: 44px;
+    --Color-bg-fill-fill-success-secondary: #CDFEE1;
+    --Color-text-text-success: #0C5132;
+    --Color-border-border: #E3E3E3;
+}
+
+body {
+    background-color: var(--Color-bg);
+}
+
+.container {
+    width: 100%;
+    max-width: 1376px;
+    margin: 0 auto;
+}
+
+.page-heading {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: var(--Color-text-text);
+    margin-top: 40px;
+}
+
+.body-md {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 450;
+    line-height: 20px;
+    text-align: left;
+    color: var(--Color-text-text);
+}
+
+.link {
+    text-decoration: none;
+    color: var(--Color-text-link-link);
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    height: 52px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-bottom: 1px solid var(--Color-border-border, #E3E3E3);
+    box-shadow: 0px 4px 6px -2px #1A1A1A33, 0px 1px 0px 0px #CCCCCC80 inset, 0px -1px 0px 0px #0000002B inset, -1px 0px 0px 0px #00000021 inset, 1px 0px 0px 0px #00000021 inset;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.tab {
+    padding: 16px 26px;
+}
+
+.tab.active {
+    border-bottom: 2px solid var(--Color-icon-icon-success)
+}
+
+.table {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+thead {
+    height: var(--Height-table-row);
+}
+
+th, td {
+    border-bottom: 1px solid var(--Color-border-border);
+}
+
+tr:last-child td {
+    border: none;
+}
+
+.cell {
+    padding: 0 12px;
+    height: var(--Height-table-row);
+}
+
+.column-setting-name {
+    width: 50%;
+}
+
+.delete-setting {
+    float: right;
+}
+
+.status-badge {
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 6px;
+    background: var(--Color-bg-fill-fill-transparent-secondary, #0000000F);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.status-badge.active {
+    background: var(--Color-bg-fill-fill-success-secondary);
+    color: var(--Color-text-text-success);
+}
