@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/reset.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <title>CoinSync</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="page-heading">Settings</h1>
+            <div class="header-controls">
+                <a href="/setting.html" class="btn-primary btn" aria-controls="create-setting">
+                    Create setting
+                </a>
+            </div>
+        </header>
+
+        <div class="tabs">
+            <div class="tab body-md active">All settings</div>
+            <div class="tab body-md">Published</div>
+            <div class="tab body-md">BTC</div>
+            <div class="tab body-md">USDT</div>
+            <div class="tab body-md">TON</div>
+        </div>
+
+        <div class="empty-state">
+            <img src="./assets/icon-empty.svg" alt="empty-state" class="empty-state-img">
+            <p class="empty-state-text body-lg-b">
+                Oopsie, seems that you have no settings yet
+            </p>
+            <p class="empty-state-underline body-sm">
+                Create your first setting!
+            </p>
+            <a href="/setting.html" class="btn btn-primary" aria-controls="create-setting">+</a>
+        </div>
+
+        <table class="table settings-table">
+            <thead>
+                <tr>
+                    <th class="body-md column-setting-name">Setting name</th>
+                    <th class="body-md status-cell">Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="settings-list">
+                <tr class="setting-line hidden" id="setting-line-template">
+                    <td class="cell column-setting-name">
+                        <a href="/setting.html" class="body-md link setting-link" class="body-md link">BTC increase each
+                            2 sec for T-Shirts</a>
+                    </td>
+                    <td class="status status-cell">
+                        <span class="status-badge setting-status-badge body-md">
+                            Draft
+                        </span>
+                    </td>
+                    <td class="delete-icon-cell">
+                        <button class="delete-setting">
+                            <img class="delete-icon" src="./assets/Icon-remove.svg" alt="remove"
+                                aria-controls="create-remove">
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script type="application/json" id="state">
+        {
+            "currencies": {
+                "BTC": {
+                    "title": "Bitcoin",
+                    "rate": 1
+                },
+                "USDT": {
+                    "title": "Tether",
+                    "rate": 12
+                },
+                "ETH": {
+                    "title": "Ethereum",
+                    "rate": 13
+                }
+            },
+            "settings": [
+                {
+                    "id": 1,
+                    "title": "BTC & USDT increase each 2 sec for T-Shirts",
+                    "status": "active",
+                    "formulas": [
+                        {
+                            "id": 1,
+                            "title": "BTC in used for T-Shirts",
+                            "formula": "X * Y",
+                            "frequency": 2000,
+                            "currency": "BTC",
+                            "targets": {
+                                "collectionsIds": [
+                                    1,
+                                    2
+                                ],
+                                "products": [
+                                    {
+                                        "id": 1,
+                                        "variantsIds": [
+                                            1,
+                                            2
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 1,
+                            "title": "USDT in used for hoodies",
+                            "formula": "X + Y",
+                            "frequency": 2000,
+                            "currency": "USDT",
+                            "targets": {
+                                "collectionsIds": [
+                                    3,
+                                    4
+                                ],
+                                "products": [
+                                    {
+                                        "id": 3,
+                                        "variants": [1,2,3]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "collections": [
+                {
+                    "id": 1,
+                    "title": "T-Shirts"
+                },
+                {
+                    "id": 2,
+                    "title": "Hoodies"
+                },
+                {
+                    "id": 3,
+                    "title": "Socks"
+                },
+                {
+                    "id": 4,
+                    "title": "Caps"
+                }
+            ],
+            "products": [
+                {
+                    "id": 3456547,
+                    "title": "Product 1",
+                    "price": 11,
+                    "variants": [
+                        {
+                            "id": 645345,
+                            "title": "Black",
+                            "price": 11
+                        },
+                        {
+                            "id": 234546,
+                            "title": "Red",
+                            "price": 12
+                        },
+                        {
+                            "id": 7654543,
+                            "title": "White",
+                            "price": 13
+                        }
+                    ]
+                },
+                {
+                    "id": 7456892345,
+                    "title": "Product 2",
+                    "price": 15,
+                    "variants": []
+                },
+                {
+                    "id": 4576846578,
+                    "title": "Product 3",
+                    "price": 20.99,
+                    "variants": [
+                        {
+                            "id": 63456,
+                            "title": "Black",
+                            "price": 29.99
+                        },
+                        {
+                            "id": 3456678,
+                            "title": "Red",
+                            "price": 20.99
+                        },
+                        {
+                            "id": 6785545,
+                            "title": "White",
+                            "price": 29.99
+                        }
+                    ]
+                },
+                {
+                    "id": 1235434,
+                    "title": "Product 4",
+                    "price": 50,
+                    "variants": [
+                        {
+                            "id": 1123,
+                            "title": "XXL",
+                            "price": 55.99
+                        },
+                        {
+                            "id": 22345,
+                            "title": "XL",
+                            "price": 51.99
+                        },
+                        {
+                            "id": 34567,
+                            "title": "L",
+                            "price": 50
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+    <script src="./src/scripts/index.js"></script>
+</body>
+
+</html>
